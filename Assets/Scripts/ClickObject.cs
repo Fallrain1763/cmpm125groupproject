@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ClickObject : MonoBehaviour
 {
-    public List<Color> colorList = new List<Color>();
+    public GameObject body;
+    public List<Material> colorList = new List<Material>();
     public int currentColor = 0; // 0 = Red, 1 = Green, 2 = Blue.
     // Start is called before the first frame update
     void Start()
