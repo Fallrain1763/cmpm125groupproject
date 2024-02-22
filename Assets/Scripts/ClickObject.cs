@@ -28,5 +28,20 @@ public class ClickObject : MonoBehaviour
                 hit.collider.gameObject.GetComponent<MeshRenderer>().material = colorList[currentColor];
             }
         }
+
+        //this is for testing purposes
+        //Alpha1 = "1" on keyboard
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentColor = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentColor = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentColor = 2;
+        }
     }
 }
