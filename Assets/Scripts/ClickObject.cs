@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class ClickObject : MonoBehaviour
 {
+    public GameObject body;
     public List<Material> colorList = new List<Material>();
-    public int currentColor = 0; // 0 = Red, 1 = Green, 2 = Blue, 3 = Default/White.
-    public PhysicMaterial bouncyMaterial;
-    public PhysicMaterial defaultMaterial;
+    public int currentColor = 0; // 0 = Red, 1 = Green, 2 = Blue.
     // Start is called before the first frame update
     void Start()
     {
@@ -27,28 +26,22 @@ public class ClickObject : MonoBehaviour
             {
                 //Debug.Log("OBJECT HIT");
                 hit.collider.gameObject.GetComponent<MeshRenderer>().material = colorList[currentColor];
-                switch(currentColor) 
-                {
-                    case 0:
-                        // Red
-                        hit.collider.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-                        break;
-                    case 1:
-                        // Green
-                        hit.collider.gameObject.GetComponent<Collider>().sharedMaterial = bouncyMaterial;
-                        break;
-                    case 2:
-                        // Blue
-                        hit.collider.gameObject.GetComponent<Rigidbody>().useGravity = false;
-                        break;
-                    default:
-                        // White
-                        hit.collider.gameObject.GetComponent<Collider>().sharedMaterial = defaultMaterial; // Reverses green
-                        hit.collider.gameObject.GetComponent<Rigidbody>().useGravity = true; // Reverses blue
-                        hit.collider.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; // Reverses red
-                        break;
-                }
             }
+        }
+
+        //this is for testing purposes
+        //Alpha1 = "1" on keyboard
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentColor = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentColor = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentColor = 2;
         }
     }
 }
