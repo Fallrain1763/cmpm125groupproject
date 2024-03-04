@@ -50,8 +50,6 @@ public class PlayerMovement : MonoBehaviour
             moveDirection.y = movementDirectionY;
         }
 
-        //if (characterController.isGrounded && )
-
         if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
@@ -79,6 +77,17 @@ public class PlayerMovement : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        }
+    }
+
+    // wont work for some reason pls help ;-;
+    void OnCollisionEnter(Collision collision)
+    {
+        // Sends player upwards if bouncy
+        if (collision.gameObject.GetComponent<Collider>().sharedMaterial.name == "Bouncy")
+        {
+            Debug.Log("On bouncy");
+            moveDirection.y = bouncePower;
         }
     }
 }

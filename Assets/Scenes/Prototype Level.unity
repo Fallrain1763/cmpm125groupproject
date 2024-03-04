@@ -154,6 +154,7 @@ MonoBehaviour:
   walkSpeed: 6
   runSpeed: 12
   jumpPower: 7
+  bouncePower: 9
   gravity: 19
   lookSpeed: 2
   lookXLimit: 45
