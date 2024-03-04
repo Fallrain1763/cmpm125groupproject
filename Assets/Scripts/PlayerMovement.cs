@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
     public float jumpPower = 7f;
+    public float bouncePower = 9f; // bounce power off of bouncy object
     public float gravity = 10f;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
@@ -48,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
         {
             moveDirection.y = movementDirectionY;
         }
+
+        //if (characterController.isGrounded && )
 
         if (!characterController.isGrounded)
         {
