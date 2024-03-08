@@ -221,7 +221,7 @@ MonoBehaviour:
   player: {fileID: 12378810}
   colorList:
   - {fileID: 2100000, guid: b9e525c38871745a1a9fbd2db475502f, type: 2}
-  - {fileID: 2100000, guid: dd594aa7b65105b4f830bddd556f66fa, type: 2}
+  - {fileID: 2100000, guid: 4b60dd7ef7cdbe94bbf4eb7eb46c4e2f, type: 2}
   - {fileID: 2100000, guid: 07195e8f301b844adb731b1097eef4b0, type: 2}
   currentColor: 0
   bouncyMaterial: {fileID: 13400000, guid: 84712d659d81e4944ae287ce52b83dbc, type: 2}

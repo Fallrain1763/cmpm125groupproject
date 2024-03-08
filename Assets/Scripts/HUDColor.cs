@@ -19,21 +19,7 @@ public class HUDColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // this changes the color of the bar 
-        // Note: This is inefficient especially when we will have multiple colors
-        // Will try to go back and change it to get material color instead of referencing currentcolor
-        // in ClickObject.CS and manually adding it. - Brandon
-
-        // Red
-        if (clickobject.currentColor == 0)
-            colorbar.GetComponent<Image>().color = new Color32(236, 8, 8, 255);
-        // Green
-        if (clickobject.currentColor == 1)
-            colorbar.GetComponent<Image>().color = new Color32(93, 255, 0, 255);
-        // Blue
-        if (clickobject.currentColor == 2)
-            colorbar.GetComponent<Image>().color = new Color32(17, 16, 225, 226);
         //references the color list and gets the color of the material
-        //colorbar.GetComponent<Image>().color = clickobject.colorList[clickobject.currentColor].color;
+        colorbar.GetComponent<Image>().color = clickobject.colorList[clickobject.currentColor].color;
     }
 }
