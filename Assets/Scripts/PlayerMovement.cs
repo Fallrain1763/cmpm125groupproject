@@ -5,10 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject body;
     public Camera playerCamera;
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
     public float jumpPower = 7f;
+    public float bouncePower = 20f; // bounce power off of bouncy object
     public float gravity = 10f;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
@@ -54,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             moveDirection.y -= gravity * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.R) && canMove)
+        if (Input.GetKey(KeyCode.C) && canMove)
         {
             characterController.height = crouchHeight;
             walkSpeed = crouchSpeed;
@@ -76,6 +78,28 @@ public class PlayerMovement : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+        }
+
+        //Testing
+        /*if (characterController.isGrounded)
+        {
+            Debug.Log("grounded");
+        }*/
+
+        RaycastHit hit;
+        // Uses raycast to detect if raycast is facing clickable object.
+        if(Physics.Raycast(body.transform.position, Vector3.down, out hit, 20.0f))
+        {
+            //Debug.DrawRay(transform.position, transform.forward*5, Color.red, 1.0f, true);
+            //Debug.Log(hit.collider.gameObject.name);
+            if(hit.collider.gameObject.CompareTag("Paintable"))
+            {
+                if(hit.collider.gameObject.GetComponent<Collider>().sharedMaterial.name == "Bouncy" && characterController.isGrounded)
+                {
+                    //Debug.Log("On bouncy");
+                    moveDirection.y = bouncePower;
+                }
+            }
         }
     }
 }
