@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class HUDColor : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class HUDColor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+    
     }
 
     // Update is called once per frame
@@ -32,6 +33,7 @@ public class HUDColor : MonoBehaviour
         // Blue
         if (clickobject.currentColor == 2)
             colorbar.GetComponent<Image>().color = new Color32(17, 16, 225, 226);
-
+        //references the color list and gets the color of the material
+        //colorbar.GetComponent<Image>().color = clickobject.colorList[clickobject.currentColor].color;
     }
 }

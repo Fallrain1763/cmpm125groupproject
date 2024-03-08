@@ -217,7 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296f30ff1ea4c7b4098d3a074f8a7aa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 646025565}
   player: {fileID: 12378810}
   colorList:
   - {fileID: 2100000, guid: b9e525c38871745a1a9fbd2db475502f, type: 2}

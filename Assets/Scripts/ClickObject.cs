@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ClickObject : MonoBehaviour
 {
-    public GameObject body;
     public GameObject player;
     public List<Material> colorList = new List<Material>();
     public int currentColor = 0; // 0 = Red, 1 = Green, 2 = Blue.
