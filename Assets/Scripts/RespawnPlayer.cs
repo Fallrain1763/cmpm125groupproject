@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class RespawnPlayer : MonoBehaviour
 {
-    public Vector3 playerPos;
-    public Quaternion playerRot;
+    static public RespawnPlayer instance;
+    static public Vector3 playerPos;
+    static public Quaternion playerRot;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +25,7 @@ public class RespawnPlayer : MonoBehaviour
         // Checks if player entered the respawn trigger.
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Returns player to starting position.
-            //GameObject.Find("Player").GetComponent<Rigidbody>().velocity = Vector3.zero;
-            //GameObject.Find("Player").GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            // Saves player's current position.
             Debug.Log("Trigger enter");
             GameObject.FindGameObjectWithTag("Player").transform.position = playerPos;
             GameObject.FindGameObjectWithTag("Player").transform.rotation = playerRot;
