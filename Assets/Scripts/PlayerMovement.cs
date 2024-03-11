@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         }*/
 
         RaycastHit hit;
-        // Uses raycast to detect if raycast is facing clickable object.
+        // Uses raycast to detect if raycast is facing bouncy object.
         if(Physics.Raycast(body.transform.position, Vector3.down, out hit, 20.0f))
         {
             //Debug.DrawRay(transform.position, transform.forward*5, Color.red, 1.0f, true);
