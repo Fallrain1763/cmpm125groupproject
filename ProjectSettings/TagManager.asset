@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Paintable
+  - Red
+  - Blue
+  - Green
+  - L2
+  - L3
+  - Win
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
+
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public float defaultHeight = 2f;
     public float crouchHeight = 1f;
     public float crouchSpeed = 3f;
+  
 
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
@@ -101,5 +104,14 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+
+        if (body.transform.position.y < -100)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            SceneManager.LoadScene("Lose");
+        }
     }
+
+    
 }

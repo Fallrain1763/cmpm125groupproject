@@ -19,8 +19,10 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Game");
+        PlayerPrefs.SetInt("isRed", 0);
+        PlayerPrefs.SetInt("isBlue", 0);
+        PlayerPrefs.SetInt("isGreen", 0);
+        SceneManager.LoadScene("Level1");
     }
 
     public void GameOver()

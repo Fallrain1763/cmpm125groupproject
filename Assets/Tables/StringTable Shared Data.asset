@@ -59,6 +59,10 @@ MonoBehaviour:
     m_Key: ContinueKey
     m_Metadata:
       m_Items: []
+  - m_Id: 647492172505088
+    m_Key: cKey
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
