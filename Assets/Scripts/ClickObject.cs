@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class ClickObject : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class ClickObject : MonoBehaviour
     private bool isBlue;
     private bool isRed;
     private bool isGreen;
-   
+    public AudioSource clickSound;
+    public AudioSource switchSound;
 
     // Start is called before the first frame update
     void Start()
@@ -100,16 +102,19 @@ public class ClickObject : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             currentColor = 0;
+            switchSound.Play();
             whiteBar.transform.localPosition = new Vector3(500, 490, 0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             currentColor = 1;
+            switchSound.Play();
             whiteBar.transform.localPosition = new Vector3(650, 490, 0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             currentColor = 2;
+            switchSound.Play();
             whiteBar.transform.localPosition = new Vector3(800, 490, 0);
         }
 
@@ -119,6 +124,12 @@ public class ClickObject : MonoBehaviour
             redBar.GetComponent<Image>().color = colorList[1].color;
         if (isGreen)
             greenBar.GetComponent<Image>().color = colorList[2].color;
+
+        Mouse mouse = Mouse.current;
+        if (mouse.leftButton.wasPressedThisFrame)
+        {
+            clickSound.Play();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
