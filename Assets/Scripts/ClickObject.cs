@@ -105,19 +105,19 @@ public class ClickObject : MonoBehaviour
         {
             currentColor = 0;
             switchSound.Play();
-            whiteBar.transform.localPosition = new Vector3(500, 490, 0);
+            whiteBar.transform.localPosition = new Vector3(350, 340, 0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             currentColor = 1;
             switchSound.Play();
-            whiteBar.transform.localPosition = new Vector3(650, 490, 0);
+            whiteBar.transform.localPosition = new Vector3(480, 340, 0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             currentColor = 2;
             switchSound.Play();
-            whiteBar.transform.localPosition = new Vector3(800, 490, 0);
+            whiteBar.transform.localPosition = new Vector3(610, 340, 0);
         }
 
         if (isBlue)
