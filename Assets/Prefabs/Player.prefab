@@ -319,6 +319,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 1485988127262524297}
   player: {fileID: 3068394812680507104}
+  whiteBar: {fileID: 0}
+  blueBar: {fileID: 0}
+  redBar: {fileID: 0}
+  greenBar: {fileID: 0}
   colorList:
   - {fileID: 2100000, guid: b9e525c38871745a1a9fbd2db475502f, type: 2}
   - {fileID: 2100000, guid: 4b60dd7ef7cdbe94bbf4eb7eb46c4e2f, type: 2}
@@ -326,6 +330,12 @@ MonoBehaviour:
   currentColor: 0
   bouncyMaterial: {fileID: 13400000, guid: 84712d659d81e4944ae287ce52b83dbc, type: 2}
   defaultMaterial: {fileID: 13400000, guid: 980a6829b83419a49b7fa0e0e76731e0, type: 2}
+  clickSound: {fileID: 0}
+  switchSound: {fileID: 0}
+  splashSounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7796745056716792417
 GameObject:
   m_ObjectHideFlags: 0

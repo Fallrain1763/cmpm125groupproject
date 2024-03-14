@@ -23,6 +23,7 @@ public class ClickObject : MonoBehaviour
     private bool isGreen;
     public AudioSource clickSound;
     public AudioSource switchSound;
+    public AudioSource[] splashSounds;
 
     // Start is called before the first frame update
     void Start()
@@ -56,8 +57,9 @@ public class ClickObject : MonoBehaviour
             //Debug.Log(hit.collider.gameObject.name);
             if(hit.collider.gameObject.CompareTag("Paintable") && Input.GetButtonDown("Fire1"))
             {
+                playSplashSFX();
                 //Debug.Log("OBJECT HIT");
-                switch(currentColor) 
+                switch (currentColor) 
                 {
                     case 0:
                         if (isBlue)
@@ -166,5 +168,11 @@ public class ClickObject : MonoBehaviour
             Cursor.visible = true;
             SceneManager.LoadScene("Win");
         }
+    }
+
+    private void playSplashSFX()
+    {
+
+        splashSounds[Random.Range(0, splashSounds.Length)].Play();
     }
 }
