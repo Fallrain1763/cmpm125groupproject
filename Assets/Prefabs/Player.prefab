@@ -484,7 +484,7 @@ MonoBehaviour:
   RandomizedPitchRange: {x: 0.95, y: 1.05}
   FloorDistance: 0.55
   DistancePerStep: 1.7
-  CurrentFootProfile: {fileID: 0}
+  CurrentFootProfile: {fileID: 11400000, guid: 2991538739420a3429590cb899d97b85, type: 2}
   CurrentFootMaterialName: 
   CurrentTerrain: {fileID: 0}
   CrouchSpeed: 2.5
