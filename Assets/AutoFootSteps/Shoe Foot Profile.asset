@@ -74,6 +74,7 @@ MonoBehaviour:
     - Terrazzo
     - Masonry
     - Grid
+    - Prototyp
     SoftSteps:
     - {fileID: 8300000, guid: 0e177e03d5e598346b55a7b5b338308d, type: 3}
     - {fileID: 8300000, guid: ad067f9a92288174f8feef9b6a16fd77, type: 3}
