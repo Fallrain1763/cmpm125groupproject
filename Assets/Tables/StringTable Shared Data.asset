@@ -63,6 +63,10 @@ MonoBehaviour:
     m_Key: cKey
     m_Metadata:
       m_Items: []
+  - m_Id: 964119766228992
+    m_Key: CreditsKey
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
