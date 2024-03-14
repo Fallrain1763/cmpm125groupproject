@@ -1292,11 +1292,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1546372554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a73816050ba9f4b449bf14571d245342, type: 3}
+  m_Script: {fileID: 11500000, guid: 42d4aaadc6e4c4c7fafa4ef95bddaa58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myMixer: {fileID: 24100000, guid: fe1b3b391ab3348a49a3601903fa9bf3, type: 2}
-  volumeBar: {fileID: 0}
 --- !u!1 &2128743898
 GameObject:
   m_ObjectHideFlags: 0
